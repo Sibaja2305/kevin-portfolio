@@ -1,0 +1,14 @@
+{
+    "navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home":{
+    "greeting": "hello I am",
+    "title": "Full Stack Developer",
+    "aboutMe": "Fourth-year student of the Business Informatics degree program with an interest in web development, preferably in the Backend area and in database design and administration.\nI am a responsible and organized person, with strong communication and teamwork skills.\nI am characterized by my ability to adapt to different environments, my problem-solving skills, good time management, and the ability to make decisions under pressure."
+
+  }
+
+}

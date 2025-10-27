@@ -1,0 +1,14 @@
+{
+    "navbar":{
+        "home": "inicio",
+        "projects": "Proyectos",
+        "contact": "Contacto"
+    },
+
+    "home":{
+        "greeting": "Hola soy",
+        "title": "Desarrollador Full Stack",
+        "aboutMe": "Estudiante de cuarto año de la carrera de informática empresarial con\ninterés en el desarrollo web, preferiblemente en la parte de Backend y\nen el diseño y administración de base de datos. Soy una persona\nresponsable, organizada, acompañada de fuertes habilidades en\ncomunicación y trabajo en equipo. Me caracterizo por mi capacidad de\nadaptarme a diferentes entornos, tengo la habilidad de resolver\nproblemas, puedo gestionar de una buena manera mi tiempo y puedo tomar\ndecisiones bajo presión."
+    }
+
+}
