@@ -7,7 +7,7 @@ import { useLanguage } from "../context/LanguageContext";
 
 const Navbar = () => {
   const pathname = usePathname();
-  const {lang, setLang, t} = useLanguage();
+  const { lang, setLang, t } = useLanguage();
   const { isDark, setIsDark } = useTheme();
 
   const links = [
@@ -18,17 +18,21 @@ const Navbar = () => {
 
   return (
     <nav className="bg-background border-b border-theme shadow-sm transition">
-      <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
-        <Link href="/" className="font-semibold text-lg text-foreground">
+      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row sm:justify-between sm:items-center py-3 px-4 gap-3 sm:gap-0">
+
+        <Link
+          href="/"
+          className="font-semibold text-lg text-foreground text-center sm:text-left"
+        >
           Kevin Sibaja Granados
         </Link>
 
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap justify-center sm:justify-end items-center gap-3">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`${
+              className={`text-sm ${
                 pathname === link.href
                   ? "text-accent font-semibold"
                   : "text-foreground hover:text-accent"
@@ -37,19 +41,18 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-            <button
+          <button
             onClick={() => setLang(lang === "es" ? "en" : "es")}
-            className="text-sm border border-theme px-3 py-1 rounded-md hover:bg-accent hover:text-white transition"
+            className="text-xs border border-theme px-3 py-1 rounded-md hover:bg-accent hover:text-white transition"
             title="Cambiar idioma"
           >
             {lang === "es" ? "EN" : "ES"}
           </button>
-
           <button
             onClick={() => setIsDark(!isDark)}
             className="p-2 rounded-md border border-theme hover:bg-accent hover:text-white transition"
           >
-            {isDark ? <Sun size={18} /> : <Moon size={18} />}
+            {isDark ? <Sun size={16} /> : <Moon size={16} />}
           </button>
         </div>
       </div>
