@@ -1,14 +1,54 @@
 {
-    "navbar": {
+  "navbar": {
     "home": "Home",
     "projects": "Projects",
     "contact": "Contact"
   },
-  "home":{
+  "home": {
     "greeting": "hello I am",
     "title": "Full Stack Developer",
-    "aboutMe": "Fourth-year student of the Business Informatics degree program with an interest in web development, preferably in the Backend area and in database design and administration.\nI am a responsible and organized person, with strong communication and teamwork skills.\nI am characterized by my ability to adapt to different environments, my problem-solving skills, good time management, and the ability to make decisions under pressure."
+    "aboutMe": "Business IT professional specializing in web development, with an emphasis on backend, API consumption and design, as well as database modeling, design, and administration. I am an organized, responsible, and results-oriented individual with the ability to work in a team, adapt quickly to new environments, and solve problems efficiently, even under pressure.",
+    "contactMe": "Contact me",
+    "viewProjects": "View projects",
+    "welcomeMessage": "Graduate in Business Informatics with a solid background in software development and hands-on experience gained both in academic and professional environments. During my university studies, I developed several projects focused on web systems, management applications, API consumption, and database management, which allowed me to strengthen my technical knowledge and analytical skills.\nI had the opportunity to work at the company Dynamic Advance, where I actively participated in the development of web applications, mainly working in the Backend area through the design and consumption of REST APIs, business logic management, and database administration. Additionally, I collaborated on Frontend development using technologies such as React and Next.js, which gave me a comprehensive full-stack development perspective. I consider myself a responsible, organized, and adaptable person, with strong teamwork skills, problem-solving abilities, and sound decision-making in demanding environments.",
+    "viewSkill": "Skills"
+  },
+  "footer": {
+    "findMeOn": "find me on",
+    "law": "All rights reserved"
+  },
+  "projectCard": {
+  "viewCode": "Code",
+  "viewLive": "Live site"
+},
+"repositories": {
+  "loading": "Loading projects...",
+  "title": "My Projects",
+  "subtitle": "Repositories fetched directly from my GitHub account.",
+  "noDescription": "No description available.",
+  "code": "Code",
+  "demo": "Live Demo",
+  "viewAll": "View all on GitHub"
+},
+"contact": {
+  "title": "Let's Talk",
+  "subtitle": "Do you have a project in mind or just want to say hi? Feel free to reach out.",
+  "formTitle": "Send me a message",
+  "formSubtitle": "Fill out this form and I'll get back to you as soon as possible.",
+  "name": "Name",
+  "namePlaceholder": "Your name",
+  "email": "Email",
+  "emailPlaceholder": "your@email.com",
+  "message": "Message",
+  "messagePlaceholder": "Tell me about your project...",
+  "send": "Send Message",
+  "directEmail": "Direct Email",
+  "directEmailSubtitle": "You can also write me directly at:",
+  "responseTime": "Response Time",
+  "responseText": "I usually reply in less than 24 hours.",
+  "availability": "Availability",
+  "availabilityText": "I am currently available for freelance projects, collaborations, or remote positions."
+}
 
-  }
-
+  
 }

@@ -1,9 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "../components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import { Github, ExternalLink, Star } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
 
 interface Repo {
   id: number;
@@ -13,21 +20,24 @@ interface Repo {
   homepage?: string;
   stargazers_count: number;
   language?: string;
+  fork: boolean;
 }
 
 export default function RepositoriosPage() {
+  const { t } = useLanguage();
   const [repos, setRepos] = useState<Repo[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadRepos() {
       try {
-        const res = await fetch("https://api.github.com/users/Sibaja2305/repos");
+        const res = await fetch(
+          "https://api.github.com/users/Sibaja2305/repos"
+        );
         const data = await res.json();
 
-      
         const filtered = data
-          .filter((repo: Repo) => !repo.fork) 
+          .filter((repo: Repo) => !repo.fork)
           .sort((a: Repo, b: Repo) => b.stargazers_count - a.stargazers_count);
 
         setRepos(filtered);
@@ -44,7 +54,7 @@ export default function RepositoriosPage() {
   if (loading) {
     return (
       <main className="min-h-screen flex items-center justify-center">
-        <p className="text-muted-foreground">Cargando proyectos...</p>
+        <p className="text-muted-foreground">{t("repositories.loading")}</p>
       </main>
     );
   }
@@ -53,21 +63,28 @@ export default function RepositoriosPage() {
     <main className="min-h-screen pt-20">
       <div className="max-w-6xl mx-auto px-6 py-20">
         <div className="space-y-4 mb-12 text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-bold">Mis Proyectos</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">
+            {t("repositories.title")}
+          </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto md:mx-0">
-            Repositorios obtenidos directamente desde mi cuenta de GitHub.
+            {t("repositories.subtitle")}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {repos.map((repo) => (
-            <Card key={repo.id} className="flex flex-col hover:shadow-lg transition-shadow duration-300">
+            <Card
+              key={repo.id}
+              className="flex flex-col hover:shadow-lg transition-shadow duration-300"
+            >
               <CardHeader>
                 <div className="flex items-start justify-between gap-4">
                   <div className="space-y-2 flex-1">
-                    <CardTitle className="text-lg md:text-xl font-semibold">{repo.name}</CardTitle>
+                    <CardTitle className="text-lg md:text-xl font-semibold">
+                      {repo.name}
+                    </CardTitle>
                     <CardDescription className="leading-relaxed text-muted-foreground">
-                      {repo.description || "Sin descripción disponible."}
+                      {repo.description || t("repositories.noDescription")}
                     </CardDescription>
                   </div>
                   <div className="flex items-center gap-1 text-muted-foreground shrink-0">
@@ -85,10 +102,15 @@ export default function RepositoriosPage() {
                 )}
 
                 <div className="flex items-center gap-3">
-                  <Button variant="outline" size="sm" asChild href={repo.html_url}>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    asChild
+                    href={repo.html_url}
+                  >
                     <span>
                       <Github className="h-4 w-4 mr-2 inline" />
-                      Código
+                      {t("repositories.code")}
                     </span>
                   </Button>
 
@@ -96,7 +118,7 @@ export default function RepositoriosPage() {
                     <Button size="sm" asChild href={repo.homepage}>
                       <span>
                         <ExternalLink className="h-4 w-4 mr-2 inline" />
-                        Ver Demo
+                        {t("repositories.demo")}
                       </span>
                     </Button>
                   )}
@@ -107,10 +129,15 @@ export default function RepositoriosPage() {
         </div>
 
         <div className="mt-12 text-center">
-          <Button variant="outline" size="lg" asChild href="https://github.com/tuusuario">
+          <Button
+            variant="outline"
+            size="lg"
+            asChild
+            href="https://github.com/Sibaja2305"
+          >
             <span>
               <Github className="h-5 w-5 mr-2 inline" />
-              Ver todos en GitHub
+              {t("repositories.viewAll")}
             </span>
           </Button>
         </div>

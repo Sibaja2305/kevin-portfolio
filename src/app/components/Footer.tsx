@@ -1,9 +1,12 @@
+'use client';
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
   return (
     <footer className="py-10 text-center border-t border-gray-300 dark:border-gray-800 mt-16 bg-transparent text-inherit transition-colors">
-      <h3 className="text-xl font-semibold mb-4">Encuéntrame en</h3>
+      <h3 className="text-xl font-semibold mb-4">{t("footer.findMeOn")} </h3>
 
       <div className="flex justify-center gap-4 mb-4">
         <a
@@ -29,7 +32,7 @@ export default function Footer() {
       </div>
 
       <p className="text-gray-600 dark:text-gray-400 text-sm transition-colors">
-        © 2025 Kevin Sibaja. Todos los derechos reservados.
+        © 2025 Kevin Sibaja. {t("footer.law")}.
       </p>
     </footer>
   );

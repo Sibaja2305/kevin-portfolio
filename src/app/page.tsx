@@ -68,28 +68,27 @@ export default function Home() {
             href="/contacto"
             className="px-6 py-3 bg-foreground text-background rounded-lg font-semibold hover:opacity-80 hover:scale-[1.02] transition-all duration-200"
           >
-            Contáctame
+            {t("home.contactMe")}
           </a>
           <a
             href="/repositorios"
             className="px-6 py-3 border border-foreground text-foreground rounded-lg font-semibold hover:bg-accent hover:text-white transition-all duration-200"
           >
-            Ver Proyectos
+            {t("home.viewProjects")}
           </a>
         </div>
       </section>
 
       <section className="max-w-5xl mx-auto text-center">
-        <p className="mt-6 text-lg text-muted max-w-3xl mx-auto leading-relaxed">
-          Actualmente realizo mi práctica profesional de último año de la
-          carrera, participando en el desarrollo Backend de aplicaciones web,
-          trabajando tanto en el consumo y diseño de APIs REST como también un
-          poco de Frontend con React y Next.js.
+        <p className="mt-6 text-lg text-muted max-w-3xl mx-auto leading-relaxed whitespace-pre-line">
+          {t("home.welcomeMessage")}
         </p>
       </section>
 
       <section className="max-w-6xl mx-auto mt-28">
-        <h2 className="text-4xl font-bold mb-10 text-center">Habilidades</h2>
+        <h2 className="text-4xl font-bold mb-10 text-center">
+          {t("home.viewSkill")}
+        </h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {skills.map((skill) => (

@@ -1,14 +1,56 @@
 {
-    "navbar":{
-        "home": "inicio",
-        "projects": "Proyectos",
-        "contact": "Contacto"
-    },
+  "navbar": {
+    "home": "inicio",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
 
-    "home":{
-        "greeting": "Hola soy",
-        "title": "Desarrollador Full Stack",
-        "aboutMe": "Estudiante de cuarto año de la carrera de informática empresarial con\ninterés en el desarrollo web, preferiblemente en la parte de Backend y\nen el diseño y administración de base de datos. Soy una persona\nresponsable, organizada, acompañada de fuertes habilidades en\ncomunicación y trabajo en equipo. Me caracterizo por mi capacidad de\nadaptarme a diferentes entornos, tengo la habilidad de resolver\nproblemas, puedo gestionar de una buena manera mi tiempo y puedo tomar\ndecisiones bajo presión."
-    }
+  "home": {
+    "greeting": "Hola soy",
+    "title": "Desarrollador Full Stack",
+    "aboutMe": "Profesional en Informática Empresarial especializado en desarrollo web, con énfasis en Backend, consumo y diseño de APIs, así como en el modelado, diseño y administración de bases de datos. Soy una persona organizada, responsable y orientada a resultados, con capacidad para trabajar en equipo, adaptarme rápidamente a nuevos entornos y resolver problemas de forma eficiente, incluso bajo presión.",
+    "contactMe": "Contactame",
+    "viewProjects": "Ver projectos",
+    "welcomeMessage": "Egresado de la carrera de Informática Empresarial, con una sólida formación en desarrollo de software y experiencia práctica adquirida tanto en el ámbito académico como profesional. Durante mi etapa universitaria desarrollé diversos proyectos enfocados en sistemas web, aplicaciones de gestión, consumo de APIs y manejo de bases de datos, lo que me permitió fortalecer mis conocimientos técnicos y mi capacidad de análisis.\nTuve la oportunidad de trabajar en la empresa Dynamic Advance, donde participé activamente en el desarrollo de aplicaciones web, desempeñándome principalmente en el área de Backend mediante el consumo y diseño de APIs REST, manejo de lógica de negocio y administración de bases de datos. Además, colaboré en el desarrollo Frontend utilizando tecnologías como React y Next.js, lo que me brindó una visión integral del desarrollo full stack. Me considero una persona responsable, organizada, adaptable, con facilidad para el trabajo en equipo, la resolución de problemas y la toma de decisiones en entornos exigentes.",
+    "viewSkill": "Habilidades"
+  },
+  "footer": {
+    "findMeOn": "Encuentrame en",
+    "law": "Todos los derechos reservados"
+    
+  },
+  "projectCard": {
+  "viewCode": "Codigo",
+  "viewLive": "Ver sitio"
+},
+"repositories": {
+  "loading": "Cargando proyectos...",
+  "title": "Mis Proyectos",
+  "subtitle": "Repositorios obtenidos directamente desde mi cuenta de GitHub.",
+  "noDescription": "Sin descripción disponible.",
+  "code": "Código",
+  "demo": "Ver Demo",
+  "viewAll": "Ver todos en GitHub"
+},
+"contact": {
+  "title": "Hablemos",
+  "subtitle": "¿Tienes un proyecto en mente o simplemente quieres saludar? No dudes en contactarme.",
+  "formTitle": "Envíame un mensaje",
+  "formSubtitle": "Completa el formulario y te responderé lo antes posible.",
+  "name": "Nombre",
+  "namePlaceholder": "Tu nombre",
+  "email": "Email",
+  "emailPlaceholder": "tu@email.com",
+  "message": "Mensaje",
+  "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+  "send": "Enviar Mensaje",
+  "directEmail": "Email Directo",
+  "directEmailSubtitle": "También puedes escribirme directamente a:",
+  "responseTime": "Tiempo de Respuesta",
+  "responseText": "Normalmente respondo en menos de 24 horas.",
+  "availability": "Disponibilidad",
+  "availabilityText": "Actualmente estoy disponible para proyectos freelance, colaboraciones o posiciones remotas."
+}
+
 
 }

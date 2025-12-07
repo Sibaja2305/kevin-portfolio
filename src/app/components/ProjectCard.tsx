@@ -3,6 +3,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import { ExternalLink, Github, Star } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
 
 interface Project {
   id: number;
@@ -15,6 +16,9 @@ interface Project {
 }
 
 export function ProjectCard({ project }: { project: Project }) {
+  const { t, lang } = useLanguage();
+
+console.log("ProjectCard idioma:", lang);
   return (
     <Card className="flex flex-col hover:shadow-lg transition-shadow duration-300">
       <CardHeader>
@@ -51,7 +55,7 @@ export function ProjectCard({ project }: { project: Project }) {
           <Button variant="outline" size="sm" asChild>
             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
               <Github className="h-4 w-4 mr-2" />
-              Código
+              {t("projectCard.viewCode")}
             </a>
           </Button>
 
@@ -59,7 +63,7 @@ export function ProjectCard({ project }: { project: Project }) {
             <Button size="sm" asChild>
               <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="h-4 w-4 mr-2" />
-                Ver Demo
+                {t("projectCard.viewLive")}
               </a>
             </Button>
           )}
